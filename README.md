@@ -1,6 +1,6 @@
 <div align="center">
   
-# [Investment Recovery Path.](https://github.com/BrenoFariasdaSilva/Investiment-Recovery-Path) <img src="https://github.com/BrenoFariasdaSilva/Investiment-Recovery-Path/blob/main/.assets/Icons/Investment.png"  width="4%" height="4%">
+# [Investment Recovery Path.](https://github.com/BrenoFariasdaSilva/Investments-Recovery-Path) <img src="https://github.com/BrenoFariasdaSilva/Investments-Recovery-Path/blob/main/.assets/Icons/Investment.png"  width="4%" height="4%">
 
 </div>
 
@@ -25,7 +25,7 @@ Analyzes cryptocurrency investment portfolios and calculates optimal recovery st
 ![GitHub Stars](https://img.shields.io/github/stars/BrenoFariasdaSilva/Template-Project)
 ![GitHub Contributors](https://img.shields.io/github/contributors/BrenoFariasdaSilva/Template-Project)
 ![GitHub Created At](https://img.shields.io/github/created-at/BrenoFariasdaSilva/Template-Project)
-![wakatime](https://wakatime.com/badge/github/BrenoFariasdaSilva/Investiment-Recovery-Path.svg)
+![wakatime](https://wakatime.com/badge/github/BrenoFariasdaSilva/Investments-Recovery-Path.svg)
 
 </div>
 
@@ -83,8 +83,8 @@ This Investment Recovery Path Calculator is a Python-based tool that analyzes cr
 1. Clone the repository with the following command:
 
    ```bash
-   git clone https://github.com/BrenoFariasdaSilva/Investiment-Recovery-Path.git
-   cd Investiment-Recovery-Path
+   git clone https://github.com/BrenoFariasdaSilva/Investments-Recovery-Path.git
+   cd Investments-Recovery-Path
    ```
 
 ### Python, Pip and Venv

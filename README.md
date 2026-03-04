@@ -1,6 +1,6 @@
 <div align="center">
   
-# [Investment Recovery Path.](https://github.com/BrenoFariasdaSilva/Investments-Recovery-Path) <img src="https://github.com/BrenoFariasdaSilva/Investments-Recovery-Path/blob/main/.assets/Icons/Investment.png"  width="4%" height="4%">
+# [Investments Recovery Path.](https://github.com/BrenoFariasdaSilva/Investments-Recovery-Path) <img src="https://github.com/BrenoFariasdaSilva/Investments-Recovery-Path/blob/main/.assets/Icons/Investments.png"  width="4%" height="4%">
 
 </div>
 
@@ -36,7 +36,7 @@ Analyzes cryptocurrency investment portfolios and calculates optimal recovery st
 </div>
 
 ## Table of Contents
-- [Investment Recovery Path. ](#investment-recovery-path-)
+- [Investments Recovery Path. ](#investments-recovery-path-)
   - [Table of Contents](#table-of-contents)
   - [Introduction](#introduction)
   - [Requirements](#requirements)
@@ -57,7 +57,7 @@ Analyzes cryptocurrency investment portfolios and calculates optimal recovery st
 
 ## Introduction
 
-This Investment Recovery Path Calculator is a Python-based tool that analyzes cryptocurrency investment portfolios from Excel files and calculates optimal recovery strategies for assets with negative returns. The script performs proportional allocation of available budget based on current losses to minimize overall portfolio loss percentage.
+This Investments Recovery Path Calculator is a Python-based tool that analyzes cryptocurrency investment portfolios from Excel files and calculates optimal recovery strategies for assets with negative returns. The script performs proportional allocation of available budget based on current losses to minimize overall portfolio loss percentage.
 
 **Key Features:**
 - Automatic Excel data loading and preprocessing with data cleaning
@@ -181,12 +181,12 @@ The script generates comprehensive investment recovery recommendations including
 
 Generated output files
 - **Excel**: `Output/main_Results.xlsx`
-  - Sheet contains columns (left-to-right): `#`, `CryptoCurrency`, `Current Loss (R$)`, `Investment`, `Old % Loss`, `New % Loss`, `Improvement %`.
+  - Sheet contains columns (left-to-right): `#`, `CryptoCurrency`, `Current Loss (R$)`, `Investments`, `Old % Loss`, `New % Loss`, `Improvement %`.
   - The leading `#` column is a 1-based index (starts at 1).
   - Empty/NA cells are written as a dash (`-`) in the spreadsheet (for clarity on totals or missing percentages).
 
 - **CSV**: `Output/main_Results.csv`
-  - CSV containing header (left-to-right): `#`, `CryptoCurrency`, `Current Loss (R$)`, `Investment`, `Old % Loss`, `New % Loss`, `Improvement %`.
+  - CSV containing header (left-to-right): `#`, `CryptoCurrency`, `Current Loss (R$)`, `Investments`, `Old % Loss`, `New % Loss`, `Improvement %`.
   - Standard CSV format: comma (`,`) delimiter, dot (`.`) decimal separator.
   - Encoded as UTF-8 with BOM to improve compatibility with Excel on Windows.
   - Floats are formatted with two decimal places (e.g. `-1295.39`).
@@ -195,13 +195,13 @@ Generated output files
   Example CSV (excerpt):
 
   ```csv
-  #,CryptoCurrency,Current Loss (R$),Investment,Old % Loss,New % Loss,Improvement %
+  #,CryptoCurrency,Current Loss (R$),Investments,Old % Loss,New % Loss,Improvement %
   1,BTC,-1295.39,250.00,-12.95,-10.52,2.43
   2,XRP,-502.10,250.00,-25.10,-20.00,5.10
   3,TOTAL,-1797.49,500.00,-,-,-
   ```
 Notes about table contents
-- The table includes a final `TOTAL` row where `CryptoCurrency` is `TOTAL` and numeric totals appear under `Current Loss (R$)` and `Investment`; percentage columns for the total are represented with a dash (`-`).
+- The table includes a final `TOTAL` row where `CryptoCurrency` is `TOTAL` and numeric totals appear under `Current Loss (R$)` and `Investments`; percentage columns for the total are represented with a dash (`-`).
 
 All monetary values are displayed in Brazilian Real (R$) with proper formatting, and the output is color-coded for easy reading in the terminal.
 

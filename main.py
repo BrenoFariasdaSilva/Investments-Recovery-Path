@@ -1,6 +1,6 @@
 """
 ================================================================================
-Investment Recovery Path Calculator
+Investments Recovery Path Calculator
 ================================================================================
 Author      : Breno Farias da Silva
 Created     : 2026-02-05
@@ -48,7 +48,7 @@ Assumptions & Notes:
     - Currency values are in Brazilian Real (R$) format with thousands separator
     - Only assets with negative profit (losses) are considered for investment (if EXCLUDE_POSITIVE_CRYPTOCURRENCIES is True)
     - Excluded coins and the SUM row are filtered out automatically
-    - Investment is allocated proportionally to the absolute loss values
+    - Investments is allocated proportionally to the absolute loss values
 """
 
 import atexit  # For playing a sound when the program finishes
@@ -389,7 +389,7 @@ def calculate_proportional_allocation(target_df, budget):
     Performs proportional allocation of budget based on loss magnitudes.
 
     Calculates:
-    - Investment amount proportional to each asset's loss
+    - Investments amount proportional to each asset's loss
     - New percentage loss after hypothetical investment
     - Improvement in percentage points
 
@@ -408,16 +408,16 @@ def calculate_proportional_allocation(target_df, budget):
         f"{BackgroundColors.GREEN}Total absolute loss: {BackgroundColors.CYAN}R$ {total_abs_loss:,.2f}{Style.RESET_ALL}"
     )
 
-    target_df["Investment"] = (target_df["Profit - R$"].abs() / total_abs_loss) * budget  # Calculate proportional investment
+    target_df["Investments"] = (target_df["Profit - R$"].abs() / total_abs_loss) * budget  # Calculate proportional investment
 
     target_df["New % Loss"] = (  # Calculate new percentage loss after investment
-        target_df["Profit - R$"] / (target_df["Total Spent - R$"] + target_df["Investment"])
+        target_df["Profit - R$"] / (target_df["Total Spent - R$"] + target_df["Investments"])
     ) * 100
 
     target_df["Improvement %"] = target_df["New % Loss"] - target_df["Profit - %"]  # Calculate improvement in percentage points
 
     verbose_output(  # Output verbose completion message
-        f"{BackgroundColors.GREEN}Investment allocation calculations completed{Style.RESET_ALL}"
+        f"{BackgroundColors.GREEN}Investments allocation calculations completed{Style.RESET_ALL}"
     )
 
     return target_df  # Return DataFrame with allocation columns
@@ -431,12 +431,12 @@ def select_and_rename_display_columns(display_df):
     :return: DataFrame with renamed presentation columns
     """
 
-    table = display_df[["Data", "Profit - R$", "Investment", "Profit - %", "New % Loss", "Improvement %"]].copy()  # Select columns for display and create a copy to avoid SettingWithCopyWarning
+    table = display_df[["Data", "Profit - R$", "Investments", "Profit - %", "New % Loss", "Improvement %"]].copy()  # Select columns for display and create a copy to avoid SettingWithCopyWarning
 
     table.columns = [
         "CryptoCurrency",
         "Current Loss (R$)",
-        "Investment",
+        "Investments",
         "Old % Loss",
         "New % Loss",
         "Improvement %",
@@ -456,17 +456,17 @@ def compute_totals(final_table, totals_df=None):
 
     if totals_df is not None and not totals_df.empty:  # Prefer totals from allocated assets when available
         total_current_loss = totals_df["Profit - R$"].sum()  # Sum losses from allocated assets
-        total_investment = totals_df["Investment"].sum()  # Sum investments from allocated assets
+        total_investment = totals_df["Investments"].sum()  # Sum investments from allocated assets
     else:  # Fallback to summing from the final table if totals_df is not provided or empty (handles case with no eligible assets)
         if "Current Loss (R$)" in final_table.columns:  # Verify if the expected column exists in the final table
             total_current_loss = final_table["Current Loss (R$)"].sum()  # Sum losses from the final table
         else:  # If the expected column is missing, attempt to sum from the original column name as a fallback
             total_current_loss = final_table.get("Profit - R$", pd.Series(dtype=float)).sum()  # Sum losses from the original column if the renamed column is missing, using get to avoid KeyError and defaulting to an empty Series of floats
 
-        if "Investment" in final_table.columns:  # Verify if the expected column exists in the final table
-            total_investment = final_table["Investment"].sum()  # Sum investments from the final table
+        if "Investments" in final_table.columns:  # Verify if the expected column exists in the final table
+            total_investment = final_table["Investments"].sum()  # Sum investments from the final table
         else:  # If the expected column is missing, attempt to sum from the original column name as a fallback
-            total_investment = final_table.get("Investment", pd.Series(dtype=float)).sum()  # Sum investments from the original column if the renamed column is missing, using get to avoid KeyError and defaulting to an empty Series of floats
+            total_investment = final_table.get("Investments", pd.Series(dtype=float)).sum()  # Sum investments from the original column if the renamed column is missing, using get to avoid KeyError and defaulting to an empty Series of floats
 
     return total_current_loss, total_investment  # Return the computed totals as a tuple
 
@@ -484,7 +484,7 @@ def build_total_row(total_current_loss, total_investment):
         {
             "CryptoCurrency": ["TOTAL"],
             "Current Loss (R$)": [total_current_loss],
-            "Investment": [total_investment],
+            "Investments": [total_investment],
             "Old % Loss": [np.nan],
             "New % Loss": [np.nan],
             "Improvement %": [np.nan],
@@ -537,7 +537,7 @@ def prepare_final_table(display_df, totals_df=None):
     (current losses and total investment) based only on the assets that
     actually received allocations.
 
-    :param display_df: DataFrame with rows to display (must contain columns: "Data", "Profit - R$", "Profit - %", "Investment", "New % Loss", "Improvement %")
+    :param display_df: DataFrame with rows to display (must contain columns: "Data", "Profit - R$", "Profit - %", "Investments", "New % Loss", "Improvement %")
     :param totals_df: DataFrame used to compute totals (typically only allocated assets)
     :return: Formatted DataFrame ready for display with proper column names and totals
     """
@@ -557,7 +557,7 @@ def prepare_final_table(display_df, totals_df=None):
 
     numeric_cols = [
         "Current Loss (R$)",
-        "Investment",
+        "Investments",
         "Old % Loss",
         "New % Loss",
         "Improvement %",
@@ -577,7 +577,7 @@ def prepare_empty_allocation_result(display_df):
     """
 
     combined_df = display_df[["Data", "Profit - R$", "Profit - %"]].copy()  # Prepare display with basic columns
-    combined_df["Investment"] = 0.0  # Set zero investment for all assets
+    combined_df["Investments"] = 0.0  # Set zero investment for all assets
     combined_df["New % Loss"] = combined_df["Profit - %"].copy()  # Copy old loss as new loss (no change)
     combined_df["Improvement %"] = 0.0  # Set zero improvement for all assets
     combined_df = combined_df.sort_values(by="Profit - R$", ascending=False).reset_index(drop=True)  # Sort by loss descending
@@ -594,14 +594,14 @@ def merge_and_fill_allocation_data(display_df, target_df):
     :return: Combined DataFrame with allocations merged and missing values filled
     """
 
-    alloc = target_df.set_index("Data")[["Investment", "New % Loss", "Improvement %"]]  # Extract allocation columns from target DataFrame
+    alloc = target_df.set_index("Data")[["Investments", "New % Loss", "Improvement %"]]  # Extract allocation columns from target DataFrame
     combined_df = (  # Merge allocations into display DataFrame using left join
         display_df.set_index("Data")[["Profit - R$", "Profit - %"]]  # Select profit columns from display DataFrame
         .join(alloc, how="left")  # Left join with allocations (keeps all display rows)
         .reset_index()  # Reset index to restore Data column
     )
 
-    combined_df["Investment"] = combined_df["Investment"].fillna(0.0)  # Fill missing investments with zero (assets that received no allocation)
+    combined_df["Investments"] = combined_df["Investments"].fillna(0.0)  # Fill missing investments with zero (assets that received no allocation)
     combined_df["New % Loss"] = combined_df["New % Loss"].fillna(combined_df["Profit - %"])  # Fill missing new loss with old loss (no change for unallocated assets)
     combined_df["Improvement %"] = combined_df["Improvement %"].fillna(0.0)  # Fill missing improvement with zero (no improvement for unallocated assets)
 
@@ -697,7 +697,7 @@ def prepare_table_rows(df):
             idx,  # Row index number
             name if name != "" else "TOTAL",  # Cryptocurrency name or TOTAL label
             format_percentage_values(row.get("Current Loss (R$)", "")),  # Current loss formatted
-            format_percentage_values(row.get("Investment", "")),  # Investment amount formatted
+            format_percentage_values(row.get("Investments", "")),  # Investments amount formatted
             format_percentage_values(row.get("Old % Loss", "")),  # Old percentage loss formatted
             format_percentage_values(row.get("New % Loss", "")),  # New percentage loss formatted
             format_percentage_values(row.get("Improvement %", "")),  # Improvement percentage formatted
@@ -722,7 +722,7 @@ def format_cell_with_color(val, col_width, col_index):
         return f"{BackgroundColors.GREEN}{cell}{Style.RESET_ALL}"  # Apply green background to index and name cells
     elif col_index in (2, 4, 5):  # Current Loss, Old % Loss and New % Loss columns use red background
         return f"{BackgroundColors.RED}{cell}{Style.RESET_ALL}"  # Apply red background to loss-related cells
-    elif col_index in (3, 6):  # Investment and Improvement columns use cyan background
+    elif col_index in (3, 6):  # Investments and Improvement columns use cyan background
         return f"{BackgroundColors.CYAN}{cell}{Style.RESET_ALL}"  # Apply cyan background to investment and improvement cells
     else:  # Default formatting for any other columns (future expansion)
         return cell  # Use default formatting for any other cells (currently none, but allows for future expansion)
@@ -774,7 +774,7 @@ def format_table_output(result_table):
 
     df = result_table.copy()  # Work with a copy to avoid modifying the original DataFrame
 
-    headers = ["#", "Cryptocurrency", "Current Loss (R$)", "Investment", "Old % Loss", "New % Loss", "Improvement %"]  # Define headers for display
+    headers = ["#", "Cryptocurrency", "Current Loss (R$)", "Investments", "Old % Loss", "New % Loss", "Improvement %"]  # Define headers for display
 
     rows = prepare_table_rows(df)  # Prepare formatted row data
 
@@ -997,7 +997,7 @@ def main():
     )  # Calculate investment recovery
 
     print(
-        f"{BackgroundColors.BOLD}{BackgroundColors.GREEN}Investment Recovery Recommendations:{Style.RESET_ALL}",
+        f"{BackgroundColors.BOLD}{BackgroundColors.GREEN}Investments Recovery Recommendations:{Style.RESET_ALL}",
         end="\n",
     )  # Output results header
     print(format_table_output(result_table))  # Display the formatted result table

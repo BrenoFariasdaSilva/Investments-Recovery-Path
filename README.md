@@ -17,10 +17,10 @@ Analyzes cryptocurrency investment portfolios and calculates optimal recovery st
 <div align="center">
 
 ![GitHub Code Size in Bytes](https://img.shields.io/github/languages/code-size/BrenoFariasdaSilva/Investments-Recovery-Path)
-![GitHub Commits](https://img.shields.io/github/commit-activity/t/BrenoFariasDaSilva/Investments-Recovery-Path/main)
+![GitHub Commits](https://img.shields.io/github/commit-activity/t/BrenoFariasdaSilva/Investments-Recovery-Path/main)
 ![GitHub Last Commit](https://img.shields.io/github/last-commit/BrenoFariasdaSilva/Investments-Recovery-Path)
-![GitHub Forks](https://img.shields.io/github/forks/BrenoFariasDaSilva/Investments-Recovery-Path)
-![GitHub Language Count](https://img.shields.io/github/languages/count/BrenoFariasDaSilva/Investments-Recovery-Path)
+![GitHub Forks](https://img.shields.io/github/forks/BrenoFariasdaSilva/Investments-Recovery-Path)
+![GitHub Language Count](https://img.shields.io/github/languages/count/BrenoFariasdaSilva/Investments-Recovery-Path)
 ![GitHub License](https://img.shields.io/github/license/BrenoFariasdaSilva/Investments-Recovery-Path)
 ![GitHub Stars](https://img.shields.io/github/stars/BrenoFariasdaSilva/Investments-Recovery-Path)
 ![GitHub Contributors](https://img.shields.io/github/contributors/BrenoFariasdaSilva/Investments-Recovery-Path)

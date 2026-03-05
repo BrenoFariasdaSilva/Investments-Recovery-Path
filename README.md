@@ -16,15 +16,15 @@ Analyzes cryptocurrency investment portfolios and calculates optimal recovery st
 
 <div align="center">
 
-![GitHub Code Size in Bytes](https://img.shields.io/github/languages/code-size/BrenoFariasdaSilva/Template-Project)
-![GitHub Commits](https://img.shields.io/github/commit-activity/t/BrenoFariasDaSilva/Template-Project/main)
-![GitHub Last Commit](https://img.shields.io/github/last-commit/BrenoFariasdaSilva/Template-Project)
-![GitHub Forks](https://img.shields.io/github/forks/BrenoFariasDaSilva/Template-Project)
-![GitHub Language Count](https://img.shields.io/github/languages/count/BrenoFariasDaSilva/Template-Project)
-![GitHub License](https://img.shields.io/github/license/BrenoFariasdaSilva/Template-Project)
-![GitHub Stars](https://img.shields.io/github/stars/BrenoFariasdaSilva/Template-Project)
-![GitHub Contributors](https://img.shields.io/github/contributors/BrenoFariasdaSilva/Template-Project)
-![GitHub Created At](https://img.shields.io/github/created-at/BrenoFariasdaSilva/Template-Project)
+![GitHub Code Size in Bytes](https://img.shields.io/github/languages/code-size/BrenoFariasdaSilva/Investments-Recovery-Path)
+![GitHub Commits](https://img.shields.io/github/commit-activity/t/BrenoFariasDaSilva/Investments-Recovery-Path/main)
+![GitHub Last Commit](https://img.shields.io/github/last-commit/BrenoFariasdaSilva/Investments-Recovery-Path)
+![GitHub Forks](https://img.shields.io/github/forks/BrenoFariasDaSilva/Investments-Recovery-Path)
+![GitHub Language Count](https://img.shields.io/github/languages/count/BrenoFariasDaSilva/Investments-Recovery-Path)
+![GitHub License](https://img.shields.io/github/license/BrenoFariasdaSilva/Investments-Recovery-Path)
+![GitHub Stars](https://img.shields.io/github/stars/BrenoFariasdaSilva/Investments-Recovery-Path)
+![GitHub Contributors](https://img.shields.io/github/contributors/BrenoFariasdaSilva/Investments-Recovery-Path)
+![GitHub Created At](https://img.shields.io/github/created-at/BrenoFariasdaSilva/Investments-Recovery-Path)
 ![wakatime](https://wakatime.com/badge/github/BrenoFariasdaSilva/Investments-Recovery-Path.svg)
 
 </div>

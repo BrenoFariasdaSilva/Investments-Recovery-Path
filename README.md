@@ -30,10 +30,30 @@ Analyzes cryptocurrency investment portfolios and calculates optimal recovery st
 </div>
 
 <div align="center">
-  
-![RepoBeats Statistics](https://repobeats.axiom.co/api/embed/7aab7ac179c13d6489e877d918cd86023ba65c7d.svg "Repobeats analytics image")
+
+![GitHub Code Size in Bytes](https://img.shields.io/github/languages/code-size/BrenoFariasdaSilva/Investments-Recovery-Path)
+![GitHub Commits](https://img.shields.io/github/commit-activity/t/BrenoFariasdaSilva/Investments-Recovery-Path/main)
+![GitHub Last Commit](https://img.shields.io/github/last-commit/BrenoFariasdaSilva/Investments-Recovery-Path)
+![GitHub Forks](https://img.shields.io/github/forks/BrenoFariasdaSilva/Investments-Recovery-Path)
+![GitHub Language Count](https://img.shields.io/github/languages/count/BrenoFariasdaSilva/Investments-Recovery-Path)
+![GitHub License](https://img.shields.io/github/license/BrenoFariasdaSilva/Investments-Recovery-Path)
+![GitHub Stars](https://img.shields.io/github/stars/BrenoFariasdaSilva/Investments-Recovery-Path)
+![GitHub Contributors](https://img.shields.io/github/contributors/BrenoFariasdaSilva/Investments-Recovery-Path)
+![GitHub Created At](https://img.shields.io/github/created-at/BrenoFariasdaSilva/Investments-Recovery-Path)
+![wakatime](https://wakatime.com/badge/github/BrenoFariasdaSilva/Investments-Recovery-Path.svg)
+[![GitHub Repository Size](https://img.shields.io/github/repo-size/BrenoFariasdaSilva/Investments-Recovery-Path)](https://github.com/BrenoFariasdaSilva/Investments-Recovery-Path)
+[![Open Issues](https://img.shields.io/github/issues/BrenoFariasdaSilva/Investments-Recovery-Path)](https://github.com/BrenoFariasdaSilva/Investments-Recovery-Path/issues)
+[![Closed Issues](https://img.shields.io/github/issues-closed/BrenoFariasdaSilva/Investments-Recovery-Path)](https://github.com/BrenoFariasdaSilva/Investments-Recovery-Path/issues?q=is%3Aissue+is%3Aclosed)
+[![Open Pull Requests](https://img.shields.io/github/issues-pr/BrenoFariasdaSilva/Investments-Recovery-Path)](https://github.com/BrenoFariasdaSilva/Investments-Recovery-Path/pulls)
+[![Closed Pull Requests](https://img.shields.io/github/issues-pr-closed/BrenoFariasdaSilva/Investments-Recovery-Path)](https://github.com/BrenoFariasdaSilva/Investments-Recovery-Path/pulls?q=is%3Apr+is%3Aclosed)
+[![Monthly Commits](https://img.shields.io/github/commit-activity/m/BrenoFariasdaSilva/Investments-Recovery-Path/main)](https://github.com/BrenoFariasdaSilva/Investments-Recovery-Path/commits)
+[![Merged PRs](https://img.shields.io/github/issues-search/BrenoFariasdaSilva/Investments-Recovery-Path?query=is%3Apr%20is%3Amerged&label=merged%20PRs&color=blue)](https://github.com/BrenoFariasdaSilva/Investments-Recovery-Path/pulls?q=is%3Apr+is%3Amerged)
+![GitHub Primary Language](https://img.shields.io/badge/language-Python-3b82f6)
+
+![Repobeats Statistics](https://repobeats.axiom.co/api/embed/7aab7ac179c13d6489e877d918cd86023ba65c7d.svg)
 
 </div>
+
 
 ## Table of Contents
 - [Investments Recovery Path. ](#investments-recovery-path-)

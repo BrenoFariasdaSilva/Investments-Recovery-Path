@@ -26,7 +26,6 @@ Analyzes cryptocurrency investment portfolios and calculates optimal recovery st
 ![GitHub Contributors](https://img.shields.io/github/contributors/BrenoFariasdaSilva/Investments-Recovery-Path)
 ![GitHub Created At](https://img.shields.io/github/created-at/BrenoFariasdaSilva/Investments-Recovery-Path)
 ![wakatime](https://wakatime.com/badge/github/BrenoFariasdaSilva/Investments-Recovery-Path.svg)
-[![GitHub Repository Size](https://img.shields.io/github/repo-size/BrenoFariasdaSilva/Investments-Recovery-Path)](https://github.com/BrenoFariasdaSilva/Investments-Recovery-Path)
 [![Open Issues](https://img.shields.io/github/issues/BrenoFariasdaSilva/Investments-Recovery-Path)](https://github.com/BrenoFariasdaSilva/Investments-Recovery-Path/issues)
 [![Closed Issues](https://img.shields.io/github/issues-closed/BrenoFariasdaSilva/Investments-Recovery-Path)](https://github.com/BrenoFariasdaSilva/Investments-Recovery-Path/issues?q=is%3Aissue+is%3Aclosed)
 [![Open Pull Requests](https://img.shields.io/github/issues-pr/BrenoFariasdaSilva/Investments-Recovery-Path)](https://github.com/BrenoFariasdaSilva/Investments-Recovery-Path/pulls)
